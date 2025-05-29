@@ -10,7 +10,7 @@
   }
   
   body {
-    @apply font-body text-gray-700 bg-white antialiased;
+    @apply font-body text-gray-700 bg-black antialiased;
     line-height: 1.6;
   }
 
@@ -325,6 +325,53 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     color: #000000;
   }
+
+  /* Ореол для кнопки скролла */
+  .scroll-arrow-halo {
+    position: relative;
+    box-shadow: 
+      0 0 8px rgba(255, 223, 0, 0.2),
+      0 0 15px rgba(255, 223, 0, 0.1),
+      0 0 20px rgba(255, 223, 0, 0.05);
+  }
+
+  .scroll-arrow-halo::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgba(255, 223, 0, 0.08) 50%,
+      rgba(255, 193, 7, 0.05) 70%,
+      transparent 80%
+    );
+    border-radius: 50%;
+    z-index: -1;
+    animation: scrollHaloGlow 3s ease-in-out infinite alternate;
+  }
+
+  .scroll-arrow-halo::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: radial-gradient(
+      circle at center,
+      transparent 40%,
+      rgba(255, 223, 0, 0.03) 60%,
+      rgba(255, 193, 7, 0.02) 80%,
+      transparent 90%
+    );
+    border-radius: 50%;
+    z-index: -2;
+    animation: scrollHaloGlow 4s ease-in-out infinite alternate-reverse;
+  }
 }
 
 @layer utilities {
@@ -432,3 +479,105 @@
     transform: translateX(50px);
   }
 }
+
+@keyframes scrollHaloGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.3),
+      0 0 40px rgba(255, 215, 0, 0.15),
+      inset 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(255, 215, 0, 0.5),
+      0 0 60px rgba(255, 215, 0, 0.25),
+      inset 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(75deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(75deg) rotateZ(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: rotateX(75deg) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: rotateX(75deg) scale(1.05);
+  }
+}
+
+@keyframes portal-spin-outer {
+  from {
+    transform: rotateX(75deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(75deg) rotateZ(360deg);
+  }
+}
+
+@keyframes portal-spin-middle {
+  from {
+    transform: rotateX(75deg) rotateZ(45deg);
+  }
+  to {
+    transform: rotateX(75deg) rotateZ(405deg);
+  }
+}
+
+@keyframes portal-spin-inner {
+  from {
+    transform: rotateX(75deg) rotateY(-30deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(75deg) rotateY(-30deg) rotateZ(360deg);
+  }
+}
+
+@keyframes portal-pulse-center {
+  0%, 100% {
+    transform: rotateX(75deg) scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(75deg) scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+/* Анимации для экрана загрузки */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+

@@ -75,7 +75,7 @@ const Header: React.FC = () => {
           
           {/* Заголовок */}
           <div className="space-y-6 md:space-y-8 lg:space-y-6">
-            <p className="text-sm uppercase tracking-[0.4em] text-gray-400">
+            <p className="text-sm uppercase tracking-[0.4em] text-gray-400 font-extralight">
               Birthday Celebration
             </p>
             
@@ -92,29 +92,14 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Краткая информация */}
+          {/* Дата */}
           <div className="space-y-6 md:space-y-8 lg:space-y-6">
-            <h2 className="font-celestial text-2xl sm:text-3xl lg:text-4xl font-light text-white">
-              Элеонора Абрамова
-            </h2>
-            <p className="text-base lg:text-lg text-gray-300 max-w-xl mx-auto leading-relaxed">
-              имеет честь пригласить вас на вечеринку по случаю своего дня рождения
-            </p>
-          </div>
-
-          {/* Дата и дресс-код */}
-          <div className="space-y-6 md:space-y-8 lg:space-y-6">
-            <p className="text-sm lg:text-base text-gray-400 max-w-lg mx-auto">
-              Будем признательны, если вы сможете поддержать дресс-код мероприятия. 
-              Референсы и описание дресс-кода вы найдёте ниже.
-            </p>
-            
             <div 
               className="inline-block elegant-date py-4 px-8 lg:py-6 lg:px-10 cursor-pointer hover:shadow-lg transition-shadow duration-300 bg-black border border-gray-200"
               onClick={addToCalendar}
             >
               <div className="text-center space-y-2">
-                <p className="text-xs uppercase tracking-[0.3em] text-gray-400">
+                <p className="text-xs uppercase tracking-[0.3em] text-gray-400 font-extralight">
                   Save the Date
                 </p>
                 <time className="font-celestial text-xl lg:text-2xl xl:text-3xl font-medium block text-white">
@@ -122,6 +107,18 @@ const Header: React.FC = () => {
                 </time>
               </div>
             </div>
+          </div>
+
+          {/* Имя и приглашение */}
+          <div className="space-y-6 md:space-y-8 lg:space-y-6">
+            <h2 className="font-celestial text-2xl sm:text-3xl lg:text-4xl font-light text-white">
+              Элеонора Абрамова
+            </h2>
+            <p className="text-base lg:text-lg text-gray-200 max-w-xl mx-auto leading-relaxed font-extralight text-balance">
+              имеет честь пригласить вас на вечеринку по случаю своего дня рождения. 
+              Будем признательны, если вы сможете поддержать дресс-код мероприятия. 
+              Референсы и описание дресс-кода вы найдёте ниже.
+            </p>
           </div>
         </div>
       </div>

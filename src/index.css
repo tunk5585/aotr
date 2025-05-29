@@ -10,7 +10,7 @@
   }
   
   body {
-    @apply font-body text-gray-700 bg-black antialiased;
+    @apply font-body text-gray-700 bg-black antialiased font-extralight;
     line-height: 1.6;
   }
 

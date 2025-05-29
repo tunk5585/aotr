@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
             <p className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-gray-400">
               Contact Information
             </p>
-            <h2 className="font-elegant text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-black leading-[0.8]">
+            <h2 className="font-elegant text-3xl sm:text-4xl lg:text-5xl font-light text-black leading-[0.8]">
               Контакты
             </h2>
             <div className="h-px bg-gray-300 w-24 lg:w-32 mx-auto"></div>
@@ -28,12 +28,12 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Левая колонка - информация */}
-          <div className="space-y-8 lg:space-y-12 text-center lg:text-left">
+          <div className="space-y-8 lg:space-y-12">
             <div className="space-y-6 md:space-y-12 lg:space-y-8">
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium">
                 Распорядитель вечеринки
               </h3>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg font-extralight">
                 Если возникнут вопросы, вы всегда можете связаться с нашим распорядителем. 
                 Элина поможет с любыми деталями и ответит на все ваши вопросы о мероприятии.
               </p>
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                   </p>
                   <a 
                     href="tel:+79651906148" 
-                    className="text-base sm:text-lg lg:text-xl text-black hover:text-gray-600 transition-colors duration-300"
+                    className="text-base sm:text-lg lg:text-xl text-black hover:text-gray-600 transition-colors duration-300 font-extralight"
                   >
                     +7 965 190 6148
                   </a>
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                   <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-gray-500 mb-1">
                     Имя
                   </p>
-                  <p className="text-base sm:text-lg lg:text-xl text-black">
+                  <p className="text-base sm:text-lg lg:text-xl text-black font-extralight">
                     Элина
                   </p>
                 </div>
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
           {/* Правая колонка - карточка */}
           <div>
             <div className="bg-gray-50 p-8 sm:p-10 lg:p-12 relative">
-              <div className="text-center space-y-6 lg:space-y-8">
+              <div className="space-y-6 lg:space-y-8">
                 <div className="space-y-8 md:space-y-16 lg:space-y-10">
                   <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-500">
                     Quick Contact
@@ -88,22 +88,16 @@ const Contact: React.FC = () => {
                   <div className="space-y-4 lg:space-y-6">
                     <a 
                       href="tel:+79651906148" 
-                      className="block bg-black text-white py-4 lg:py-6 px-6 lg:px-8 text-lg lg:text-xl hover:bg-gray-800 transition-colors duration-300 font-medium"
+                      className="block bg-black text-white py-4 lg:py-6 px-6 lg:px-8 text-lg lg:text-xl hover:bg-gray-800 transition-colors duration-300 font-medium text-center"
                     >
                       Позвонить Элине
                     </a>
                     <div className="bg-white p-4 lg:p-6 border border-gray-200">
-                      <p className="text-base lg:text-lg text-gray-700">
+                      <p className="text-base lg:text-lg text-gray-700 font-extralight">
                         Время работы: 9:00 — 21:00
                       </p>
                     </div>
                   </div>
-                </div>
-
-                <div className="pt-6 lg:pt-8 border-t border-gray-200">
-                  <p className="text-sm text-gray-500 italic leading-relaxed">
-                    "Каждая деталь важна для создания идеального вечера"
-                  </p>
                 </div>
               </div>
             </div>
@@ -114,17 +108,7 @@ const Contact: React.FC = () => {
         <div className="mt-20 sm:mt-24 lg:mt-32 text-center">
           <div className="max-w-4xl mx-auto space-y-8 lg:space-y-12">
             <div className="space-y-6 lg:space-y-8">
-              <p className="font-elegant text-3xl sm:text-4xl lg:text-5xl text-black font-light leading-tight px-4">
-                До встречи в мире 
-                <br />
-                <span className="text-black">небесной красоты!</span>
-              </p>
-              
-              <div className="flex justify-center space-x-3">
-                <div className="w-4 h-4 bg-gray-400"></div>
-                <div className="w-2 h-2 bg-gray-300 mt-1"></div>
-                <div className="w-4 h-4 bg-gray-400"></div>
-              </div>
+              <div className="h-px bg-gray-300 w-24 lg:w-32 mx-auto"></div>
             </div>
 
             {/* Финальная подпись */}
@@ -136,7 +120,6 @@ const Contact: React.FC = () => {
                 <p className="font-elegant text-xl lg:text-2xl text-black">
                   Элеонора Абрамова
                 </p>
-                <div className="h-px bg-gray-300 w-24 lg:w-32 mx-auto"></div>
               </div>
             </div>
           </div>

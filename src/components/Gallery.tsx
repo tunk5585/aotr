@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const Gallery: React.FC = () => {
   const [isGalleryVisible, setIsGalleryVisible] = useState(false);
@@ -56,7 +56,7 @@ const Gallery: React.FC = () => {
   ];
 
   // Функция для расчета расстояния до портала и интенсивности свечения
-  const calculateGlowIntensity = (element: HTMLElement): number => {
+  const calculateGlowIntensity = useCallback((element: HTMLElement): number => {
     if (!portalRef.current || !isGalleryVisible) return 0;
     
     const portalRect = portalRef.current.getBoundingClientRect();
@@ -71,7 +71,7 @@ const Gallery: React.FC = () => {
     // Интенсивность от 0 до 1, максимальная когда элемент близко к порталу
     const intensity = Math.max(0, 1 - (distance / maxDistance));
     return Math.pow(intensity, 1.5); // Изменено с 2 на 1.5 для более плавного перехода
-  };
+  }, [isGalleryVisible]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -352,24 +352,16 @@ const Gallery: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Заголовок */}
-        <div className="mb-16 sm:mb-20 lg:mb-24 text-center lg:text-left">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
-            <div>
-              <p className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-gray-400 mb-4 lg:mb-6">
-                Visual References
-              </p>
-              <h2 className="font-elegant text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-[0.8]">
-                Галерея
-                <br />
-                <span className="text-white">вдохновения</span>
-              </h2>
-            </div>
-            <div className="lg:text-right">
-              <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-lg mx-auto lg:ml-auto">
-                Образы небесных созданий эпохи Возрождения 
-                для вашего вдохновения при создании идеального наряда
-              </p>
-            </div>
+        <div className="mb-16 sm:mb-20 lg:mb-24 text-center">
+          <div className="space-y-6 md:space-y-8 lg:space-y-6">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-gray-400 mb-4 lg:mb-6">
+              Visual References
+            </p>
+            <h2 className="font-elegant text-3xl sm:text-4xl lg:text-5xl font-light leading-[0.8]">
+              Галерея
+              <br />
+              <span className="text-white">вдохновения</span>
+            </h2>
           </div>
           
           <div className="mt-8 lg:mt-16">
@@ -558,13 +550,12 @@ const Gallery: React.FC = () => {
         {/* Нижний блок */}
         <div className="mt-16 sm:mt-20 lg:mt-24 text-center">
           <div className="inline-block">
-            <p className="text-gray-400 text-base sm:text-lg font-light italic px-4">
-              "Пусть каждый образ расскажет свою историю"
-            </p>
-            <div className="mt-4 lg:mt-6 flex justify-center space-x-1">
-              <div className="w-2 h-2 bg-white/60"></div>
-              <div className="w-1 h-1 bg-white/40 mt-0.5"></div>
-              <div className="w-2 h-2 bg-white/60"></div>
+            <div className="flex items-center justify-center space-x-6">
+              <div className="h-px bg-gray-300 w-12 lg:w-16"></div>
+              <div className="w-2 h-2 bg-gold transform rotate-45" style={{
+                boxShadow: '0 0 8px rgba(255, 215, 0, 0.6), 0 0 16px rgba(255, 215, 0, 0.4), 0 0 24px rgba(255, 215, 0, 0.2)'
+              }}></div>
+              <div className="h-px bg-gray-300 w-12 lg:w-16"></div>
             </div>
           </div>
         </div>

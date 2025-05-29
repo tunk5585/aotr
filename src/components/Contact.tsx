@@ -92,7 +92,7 @@ const Contact: React.FC = () => {
                     >
                       Позвонить Элине
                     </a>
-                    <div className="bg-white p-4 lg:p-6 border border-gray-200">
+                    <div className="bg-white p-4 lg:p-6 border border-gray-200 text-center">
                       <p className="text-base lg:text-lg text-gray-700 font-extralight">
                         Время работы: 12:00 — 20:00
                       </p>

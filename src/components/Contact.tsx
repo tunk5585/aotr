@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                     </a>
                     <div className="bg-white p-4 lg:p-6 border border-gray-200">
                       <p className="text-base lg:text-lg text-gray-700 font-extralight">
-                        Время работы: 9:00 — 21:00
+                        Время работы: 12:00 — 20:00
                       </p>
                     </div>
                   </div>

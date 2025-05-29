@@ -343,13 +343,6 @@ const Gallery: React.FC = () => {
         */}
       </div>
 
-      {/* Декоративные элементы только для больших экранов */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-10 w-px h-48 bg-white/10 rotate-12 hidden xl:block"></div>
-        <div className="absolute bottom-1/4 right-20 w-px h-64 bg-white/10 -rotate-12 hidden xl:block"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-px bg-white/5 hidden lg:block"></div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Заголовок */}
         <div className="mb-16 sm:mb-20 lg:mb-24 text-center">

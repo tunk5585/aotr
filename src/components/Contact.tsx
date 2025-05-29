@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Основной контент */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
           {/* Левая колонка - информация */}
           <div className="space-y-8 lg:space-y-12">
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium">
                 Распорядитель вечеринки
               </h3>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg font-extralight">
+              <p className="text-base sm:text-lg lg:text-lg text-gray-600 leading-relaxed max-w-lg font-extralight">
                 Если возникнут вопросы, вы всегда можете связаться с нашим распорядителем. 
                 Элина поможет с любыми деталями и ответит на все ваши вопросы о мероприятии.
               </p>
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                   </p>
                   <a 
                     href="tel:+79651906148" 
-                    className="text-base sm:text-lg lg:text-xl text-black hover:text-gray-600 transition-colors duration-300 font-extralight"
+                    className="text-base sm:text-lg lg:text-lg text-black hover:text-gray-600 transition-colors duration-300 font-extralight"
                   >
                     +7 965 190 6148
                   </a>
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                   <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-gray-500 mb-1">
                     Имя
                   </p>
-                  <p className="text-base sm:text-lg lg:text-xl text-black font-extralight">
+                  <p className="text-base sm:text-lg lg:text-lg text-black font-extralight">
                     Элина
                   </p>
                 </div>
@@ -82,13 +82,13 @@ const Contact: React.FC = () => {
             <div className="bg-gray-50 p-8 sm:p-10 lg:p-12 relative">
               <div className="space-y-6 lg:space-y-8">
                 <div className="space-y-8 md:space-y-16 lg:space-y-10">
-                  <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-500">
+                  <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-500 text-center">
                     Quick Contact
                   </p>
                   <div className="space-y-4 lg:space-y-6">
                     <a 
                       href="tel:+79651906148" 
-                      className="block bg-black text-white py-4 lg:py-6 px-6 lg:px-8 text-lg lg:text-xl hover:bg-gray-800 transition-colors duration-300 font-medium text-center"
+                      className="block bg-black text-white py-4 lg:py-6 px-6 lg:px-8 text-lg lg:text-lg hover:bg-gray-800 transition-colors duration-300 font-medium text-center"
                     >
                       Позвонить Элине
                     </a>

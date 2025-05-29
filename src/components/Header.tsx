@@ -79,7 +79,7 @@ const Header: React.FC = () => {
               Birthday Celebration
             </p>
             
-            <h1 className="font-divine text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light text-white leading-[0.9] tracking-wide divine-halo">
+            <h1 className="font-divine text-[2.75rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white leading-[0.9] tracking-wide divine-halo">
               Angels of the
               <br />
               <span className="text-white">Renaissance</span>
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
           {/* Дата */}
           <div className="space-y-6 md:space-y-8 lg:space-y-6">
             <div 
-              className="inline-block elegant-date py-4 px-8 lg:py-6 lg:px-10 cursor-pointer hover:shadow-lg transition-shadow duration-300 bg-black border border-gray-200"
+              className="inline-block elegant-date py-4 px-8 lg:py-6 lg:px-10 cursor-pointer hover:shadow-lg transition-shadow duration-300 bg-black border-2 border-gray-400"
               onClick={addToCalendar}
             >
               <div className="text-center space-y-2">

@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+  
+  body {
+    @apply font-body text-gray-700 bg-white antialiased;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-elegant;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 md:px-8 lg:px-12 xl:px-16;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .btn-primary {
+    @apply bg-black text-white px-8 py-3 font-medium transition-all duration-300 hover:bg-gray-800;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .writing-mode-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Божественные райские блоки */
+  .heavenly-block {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 248, 220, 0.9) 25%,
+      rgba(255, 239, 213, 0.85) 50%,
+      rgba(255, 223, 186, 0.9) 75%,
+      rgba(255, 215, 0, 0.1) 100%
+    );
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 
+      0 0 30px rgba(255, 215, 0, 0.2),
+      0 0 60px rgba(255, 215, 0, 0.1),
+      inset 0 0 30px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .heavenly-block::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 223, 0, 0.05) 30%,
+      transparent 60%
+    );
+    animation: celestialRotate 8s linear infinite;
+    z-index: 0;
+  }
+
+  .heavenly-block > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Вариант 1: Облачный небесный */
+  .cloud-divine {
+    background: linear-gradient(145deg,
+      rgba(230, 242, 255, 0.9) 0%,
+      rgba(240, 248, 255, 0.95) 30%,
+      rgba(255, 255, 255, 0.98) 50%,
+      rgba(248, 250, 252, 0.95) 70%,
+      rgba(219, 234, 254, 0.9) 100%
+    );
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    box-shadow: 
+      0 20px 40px rgba(59, 130, 246, 0.1),
+      0 0 40px rgba(147, 197, 253, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Вариант 2: Перламутровый жемчужный */
+  .pearl-divine {
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(248, 246, 240, 0.9) 20%,
+      rgba(255, 248, 220, 0.85) 40%,
+      rgba(255, 250, 240, 0.9) 60%,
+      rgba(255, 255, 255, 0.95) 80%,
+      rgba(245, 245, 245, 0.9) 100%
+    );
+    border: 2px solid rgba(229, 229, 229, 0.5);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.08),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .pearl-divine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    animation: pearlShimmer 3s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  /* Вариант 3: Кристаллический светящийся */
+  .crystal-divine {
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      0 0 60px rgba(255, 255, 255, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    position: relative;
+  }
+
+  .crystal-divine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 70%
+    );
+    animation: crystalGlow 4s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  /* Вариант 4: Мягкий пастельный */
+  .pastel-divine {
+    background: linear-gradient(135deg,
+      rgba(255, 240, 245, 0.95) 0%,
+      rgba(255, 228, 230, 0.9) 25%,
+      rgba(255, 218, 185, 0.85) 50%,
+      rgba(255, 228, 196, 0.9) 75%,
+      rgba(255, 245, 238, 0.95) 100%
+    );
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    box-shadow: 
+      0 8px 25px rgba(255, 182, 193, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .heavenly-date {
+    background: linear-gradient(135deg,
+      rgba(255, 248, 220, 0.95) 0%,
+      rgba(255, 239, 213, 0.9) 50%,
+      rgba(255, 223, 186, 0.95) 100%
+    );
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 
+      0 8px 32px rgba(255, 215, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    color: #8B4513;
+  }
+
+  /* Варианты дат */
+  .cloud-date {
+    background: linear-gradient(135deg,
+      rgba(219, 234, 254, 0.95) 0%,
+      rgba(147, 197, 253, 0.9) 50%,
+      rgba(191, 219, 254, 0.95) 100%
+    );
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 
+      0 8px 25px rgba(59, 130, 246, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    color: #1e40af;
+  }
+
+  .pearl-date {
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(248, 246, 240, 0.9) 50%,
+      rgba(229, 229, 229, 0.95) 100%
+    );
+    border: 1px solid rgba(156, 163, 175, 0.3);
+    box-shadow: 
+      0 8px 25px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    color: #374151;
+  }
+
+  .crystal-date {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    color: #1f2937;
+  }
+
+  .pastel-date {
+    background: linear-gradient(135deg,
+      rgba(255, 228, 230, 0.95) 0%,
+      rgba(255, 218, 185, 0.9) 50%,
+      rgba(255, 228, 196, 0.95) 100%
+    );
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    box-shadow: 
+      0 8px 25px rgba(255, 182, 193, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    color: #be185d;
+  }
+
+  /* Божественный светящийся ореол */
+  .divine-halo {
+    position: relative;
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 30px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 223, 0, 0.3),
+      0 0 70px rgba(255, 223, 0, 0.2),
+      0 0 80px rgba(255, 223, 0, 0.1);
+  }
+
+  .divine-halo::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 40%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 223, 0, 0.15) 60%,
+      rgba(255, 223, 0, 0.1) 70%,
+      transparent 80%
+    );
+    border-radius: 50%;
+    z-index: -1;
+    animation: haloGlow 4s ease-in-out infinite alternate;
+  }
+
+  .divine-halo::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 223, 0, 0.08) 65%,
+      transparent 75%
+    );
+    border-radius: 50%;
+    z-index: -2;
+    animation: haloGlow 6s ease-in-out infinite alternate-reverse;
+  }
+
+  /* Кастомные эффекты для RisingBlock */
+  .ethereal-glow {
+    filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.15)) 
+            drop-shadow(0 5px 10px rgba(255, 255, 255, 0.1));
+  }
+
+  .divine-aura {
+    box-shadow: 
+      0 0 40px rgba(255, 255, 255, 0.2),
+      0 0 80px rgba(255, 255, 255, 0.1),
+      inset 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+
+  .soft-levitation {
+    transform: translateY(-20px) scale(1.01);
+    filter: blur(0px);
+  }
+
+  /* Простой элегантный стиль с тонкой рамкой */
+  .elegant-frame {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .elegant-date {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d1d5db;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #000000;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+
+  .backdrop-blur-md {
+    backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes haloGlow {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes celestialRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pearlShimmer {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes crystalGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(50px);
+  }
+}

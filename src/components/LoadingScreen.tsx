@@ -37,6 +37,19 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
           await document.fonts.ready.catch(() => {
             // Игнорируем ошибки шрифтов
           });
+          
+          // Дополнительная проверка - ждем чтобы шрифты точно применились
+          await new Promise(resolve => setTimeout(resolve, 500));
+          
+          // Проверяем что конкретные шрифты загружены
+          const fontsToCheck = ['Playfair Display', 'Inter', 'Cinzel', 'Cormorant Garamond'];
+          const fontCheckPromises = fontsToCheck.map(fontFamily => 
+            document.fonts.load(`16px "${fontFamily}"`).catch(() => {
+              // Игнорируем ошибки отдельных шрифтов
+            })
+          );
+          
+          await Promise.allSettled(fontCheckPromises);
         }
 
         // Предзагружаем критически важные изображения галереи (первые 10)

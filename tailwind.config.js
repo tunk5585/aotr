@@ -14,10 +14,10 @@ module.exports = {
         celestial: '#E6F2FF',
       },
       fontFamily: {
-        elegant: ['Playfair Display', 'serif'],
-        divine: ['Cinzel', 'serif'],
-        celestial: ['Cormorant Garamond', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        elegant: ['Playfair Display', 'Times New Roman', 'serif'],
+        divine: ['Cinzel', 'Times New Roman', 'serif'],
+        celestial: ['Cormorant Garamond', 'Times New Roman', 'serif'],
+        body: ['Inter', 'Arial', 'sans-serif'],
       },
       boxShadow: {
         'glow': '0 0 20px rgba(255, 215, 0, 0.3)',

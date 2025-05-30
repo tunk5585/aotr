@@ -6,16 +6,16 @@ const DressCode: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Простой заголовок */}
-        <div className="mb-8 lg:mb-12 text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-gray-400 mb-4">
-            Dress Code
-          </p>
-          <h2 className="font-elegant text-3xl sm:text-4xl lg:text-5xl font-light text-black leading-tight">
-            Angels of the Renaissance
-          </h2>
-          
-          {/* Декоративная линия после заголовка */}
-          <div className="mt-6 lg:mt-8">
+        <div className="mb-16 sm:mb-20 lg:mb-24 text-center">
+          <div className="space-y-6 md:space-y-12 lg:space-y-8">
+            <p className="text-xs uppercase tracking-[0.4em] text-gray-400">
+              Dress Code
+            </p>
+            <h2 className="font-elegant text-3xl sm:text-4xl lg:text-5xl font-light text-black leading-tight">
+              Angels of the Renaissance
+            </h2>
+            
+            {/* Декоративная линия после заголовка */}
             <div className="h-px bg-gray-300 w-24 lg:w-32 mx-auto"></div>
           </div>
         </div>

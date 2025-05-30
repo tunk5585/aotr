@@ -346,8 +346,8 @@ const Gallery: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Заголовок */}
         <div className="mb-16 sm:mb-20 lg:mb-24 text-center">
-          <div className="space-y-6 md:space-y-8 lg:space-y-6">
-            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-gray-400 mb-4 lg:mb-6">
+          <div className="space-y-6 md:space-y-12 lg:space-y-8">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-gray-400">
               Visual References
             </p>
             <h2 className="font-elegant text-3xl sm:text-4xl lg:text-5xl font-light leading-[0.8]">
@@ -355,9 +355,6 @@ const Gallery: React.FC = () => {
               <br />
               <span className="text-white">вдохновения</span>
             </h2>
-          </div>
-          
-          <div className="mt-8 lg:mt-16">
             <div className="h-px bg-gray-300 w-24 lg:w-32 mx-auto"></div>
           </div>
         </div>

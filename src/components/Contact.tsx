@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
               Contact Information
             </p>
             <h2 className="font-elegant text-3xl sm:text-4xl lg:text-5xl font-light text-black leading-[0.8]">
-              Контакты
+              Распорядитель вечеринки
             </h2>
             <div className="h-px bg-gray-300 w-24 lg:w-32 mx-auto"></div>
           </div>
@@ -30,9 +30,6 @@ const Contact: React.FC = () => {
           {/* Левая колонка - информация */}
           <div className="space-y-8 lg:space-y-12">
             <div className="space-y-6 md:space-y-12 lg:space-y-8">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium">
-                Распорядитель вечеринки
-              </h3>
               <p className="text-base sm:text-lg lg:text-lg text-gray-600 leading-relaxed max-w-lg font-extralight">
                 Если возникнут вопросы, вы всегда можете связаться с нашим распорядителем. 
                 Элина поможет с любыми деталями и ответит на все ваши вопросы о мероприятии.

@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
             <div className="space-y-6 md:space-y-12 lg:space-y-8">
               <p className="text-base sm:text-lg lg:text-lg text-gray-600 leading-relaxed max-w-lg font-extralight">
                 Если возникнут вопросы, вы всегда можете связаться с нашим распорядителем. 
-                Элина поможет с любыми деталями и ответит на все ваши вопросы о мероприятии.
+                Екатерина поможет с любыми деталями и ответит на все ваши вопросы о мероприятии.
               </p>
             </div>
 
@@ -48,10 +48,10 @@ const Contact: React.FC = () => {
                     Телефон
                   </p>
                   <a 
-                    href="tel:+79651906148" 
+                    href="tel:+79992034747" 
                     className="text-base sm:text-lg lg:text-lg text-black hover:text-gray-600 transition-colors duration-300 font-extralight"
                   >
-                    +7 965 190 6148
+                    +7 999 203 4747
                   </a>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                     Имя
                   </p>
                   <p className="text-base sm:text-lg lg:text-lg text-black font-extralight">
-                    Элина
+                    Екатерина
                   </p>
                 </div>
               </div>
@@ -84,10 +84,10 @@ const Contact: React.FC = () => {
                   </p>
                   <div className="space-y-4 lg:space-y-6">
                     <a 
-                      href="tel:+79651906148" 
+                      href="tel:+79992034747" 
                       className="block bg-black text-white py-4 lg:py-6 px-6 lg:px-8 text-lg lg:text-lg hover:bg-gray-800 transition-colors duration-300 font-medium text-center"
                     >
-                      Позвонить Элине
+                      Позвонить Екатерине
                     </a>
                     <div className="bg-white p-4 lg:p-6 border border-gray-200 text-center">
                       <p className="text-base lg:text-lg text-gray-700 font-extralight">

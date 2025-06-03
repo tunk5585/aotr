@@ -20,40 +20,7 @@ const Header: React.FC = () => {
     }
   };
 
-  const addToCalendar = () => {
-    // Данные события
-    const eventTitle = "Angels of the Renaissance - День рождения Элеоноры";
-    const eventDate = "20250627"; // YYYYMMDD формат
-    const eventTime = "190000"; // HHMMSS формат (19:00)
-    const eventEndTime = "230000"; // HHMMSS формат (23:00)
-    const eventDescription = "Вечеринка в стиле Ренессанса. Дресс-код: небесные ангелы эпохи Возрождения";
-    const eventLocation = ""; // Можно добавить локацию если известна
 
-    // Для мобильных устройств - пробуем открыть нативный календарь
-    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      // Создаем универсальную ссылку для календаря
-      const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${eventDate}T${eventTime}/${eventDate}T${eventEndTime}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`;
-      
-      // Пробуем открыть в календаре устройства
-      const calendarIntent = `intent://calendar/events?title=${encodeURIComponent(eventTitle)}&startTime=${new Date(2025, 5, 27, 19, 0).getTime()}&endTime=${new Date(2025, 5, 27, 23, 0).getTime()}#Intent;scheme=content;package=com.android.calendar;end`;
-      
-      // Для iOS
-      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        window.open(calendarUrl, '_blank');
-      } else {
-        // Для Android пробуем intent, если не работает - fallback на Google Calendar
-        try {
-          window.location.href = calendarIntent;
-        } catch (e) {
-          window.open(calendarUrl, '_blank');
-        }
-      }
-    } else {
-      // Для десктопа - открываем Google Calendar
-      const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${eventDate}T${eventTime}/${eventDate}T${eventEndTime}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`;
-      window.open(calendarUrl, '_blank');
-    }
-  };
 
   // Отслеживаем скролл для автоматического переворота стрелки
   useEffect(() => {
@@ -94,10 +61,7 @@ const Header: React.FC = () => {
 
           {/* Дата */}
           <div className="space-y-6 md:space-y-8 lg:space-y-6">
-            <div 
-              className="inline-block elegant-date py-4 px-8 lg:py-6 lg:px-10 cursor-pointer hover:shadow-lg transition-shadow duration-300 bg-black border-2 border-gray-400"
-              onClick={addToCalendar}
-            >
+            <div className="inline-block elegant-date py-4 px-8 lg:py-6 lg:px-10 bg-black border-2 border-gray-400">
               <div className="text-center space-y-2">
                 <p className="text-xs uppercase tracking-[0.3em] text-gray-400 font-extralight">
                   Save the Date

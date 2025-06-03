@@ -4,6 +4,7 @@ import LazyImageLoader from './components/LazyImageLoader';
 import Header from './components/Header';
 import DressCode from './components/DressCode';
 import Gallery from './components/Gallery';
+import EventInfo from './components/EventInfo';
 import Contact from './components/Contact';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         { element: document.querySelector('header'), color: '#000000' }, // Header - черный
         { element: document.querySelector('[data-section="gallery"]'), color: '#000000' }, // Gallery - черный  
         { element: document.querySelector('[data-section="dresscode"]'), color: '#ffffff' }, // DressCode - белый
+        { element: document.querySelector('[data-section="eventinfo"]'), color: '#ffffff' }, // EventInfo - белый
         { element: document.querySelector('[data-section="contact"]'), color: '#ffffff' } // Contact - белый
       ];
 
@@ -86,6 +88,7 @@ function App() {
       <Header />
       <Gallery />
       <DressCode />
+      <EventInfo />
       <Contact />
     </div>
   );

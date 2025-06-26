@@ -104,9 +104,6 @@ const Contact: React.FC = () => {
         {/* Финальное сообщение */}
         <div className="mt-20 sm:mt-24 lg:mt-32 text-center">
           <div className="max-w-4xl mx-auto space-y-8 lg:space-y-12">
-            <div className="space-y-6 lg:space-y-8">
-              <div className="h-px bg-gray-300 w-24 lg:w-32 mx-auto"></div>
-            </div>
 
             {/* Финальная подпись */}
             <div className="pt-12 lg:pt-16">

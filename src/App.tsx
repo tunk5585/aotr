@@ -6,6 +6,7 @@ import DressCode from './components/DressCode';
 import Gallery from './components/Gallery';
 import EventInfo from './components/EventInfo';
 import Contact from './components/Contact';
+import GiftCollection from './components/GiftCollection';
 
 function App() {
   // Возможность пропустить загрузку для разработки
@@ -33,6 +34,7 @@ function App() {
         { element: document.querySelector('[data-section="gallery"]'), color: '#000000' }, // Gallery - черный  
         { element: document.querySelector('[data-section="dresscode"]'), color: '#ffffff' }, // DressCode - белый
         { element: document.querySelector('[data-section="eventinfo"]'), color: '#ffffff' }, // EventInfo - белый
+        { element: document.querySelector('[data-section="gift"]'), color: '#ffffff' }, // GiftCollection - белый
         { element: document.querySelector('[data-section="contact"]'), color: '#ffffff' } // Contact - белый
       ];
 
@@ -89,6 +91,7 @@ function App() {
       <Gallery />
       <DressCode />
       <EventInfo />
+      <GiftCollection />
       <Contact />
     </div>
   );

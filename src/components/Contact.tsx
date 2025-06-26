@@ -2,15 +2,10 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden" data-section="contact">
-      {/* Декоративные элементы только для больших экранов */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-32 left-20 w-px h-40 bg-gray-100 rotate-12 hidden xl:block"></div>
-        <div className="absolute bottom-40 right-24 w-px h-56 bg-gray-100 -rotate-12 hidden xl:block"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-px bg-gray-100 transform -translate-x-1/2 hidden lg:block"></div>
-      </div>
+    <section className="py-16 sm:py-24 lg:py-32 bg-white relative" data-section="contact">
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Заголовок */}
         <div className="mb-16 sm:mb-20 lg:mb-24 text-center">
           <div className="space-y-6 md:space-y-12 lg:space-y-8">

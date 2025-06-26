@@ -2,7 +2,7 @@ import React from 'react';
 
 const DressCode: React.FC = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white relative" data-section="dresscode">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white" data-section="dresscode">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Простой заголовок */}

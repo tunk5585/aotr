@@ -75,15 +75,10 @@ const EventInfo: React.FC = () => {
   };
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden" data-section="eventinfo">
-      {/* Декоративные элементы */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-12 w-px h-32 bg-gray-100 rotate-45 hidden lg:block"></div>
-        <div className="absolute bottom-24 right-16 w-px h-40 bg-gray-100 -rotate-45 hidden lg:block"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-px bg-gray-100 transform -translate-y-1/2 hidden xl:block"></div>
-      </div>
+    <section className="py-16 sm:py-24 lg:py-32 bg-white relative" data-section="eventinfo">
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Заголовок */}
         <div className="mb-16 sm:mb-20 lg:mb-24 text-center">
           <div className="space-y-6 md:space-y-12 lg:space-y-8">
